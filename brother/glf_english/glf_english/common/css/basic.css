@@ -1,0 +1,1680 @@
+@charset "utf-8";
+/*
+**************************************************
+トップページ/HTML全体
+**************************************************
+*/
+/* bodyタグ全体を包含するdiv */
+#body {
+	width: 960px;
+	border: 1px solid #666;
+	text-align: left;
+}
+/* ヘッダのdiv */
+#header {
+	height: 58px;
+}
+/* ヘッダdivが持つh1 ロゴを格納 */
+#header h1 {
+	margin: 0;
+}
+/* 左ペイン、右ペイン全体の背景画像 */
+#mainWrap {
+	background: url(../../images/sidemenu_bg.gif) repeat-y 0;
+}
+/*
+**************************************************
+左ペイン
+**************************************************
+*/
+/* 左ペインフロート設定 */
+#mainWrap #sidemenu {
+	float: left;
+	width: 300px;
+	margin: 0;
+}
+/* 左ペインのヘッダ部分を包含するdiv */
+#head {
+	padding: 10px 10px 0;
+}
+/* 左ペインヘッダ内のmainbooktitle */
+#head h2 {
+	color: #011a7f;
+	font-size: 20px;
+	line-height: 1;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+/* 左ペインヘッダ部分のモデル名 */
+#head p {
+	margin-bottom: 0;
+}
+/* 左ペイン下部のバナー(ul) */
+#sidemenu ul.banner {
+	margin: 20px 10px 10px;
+}
+/* 左ペイン下部のバナー(li) */
+#sidemenu ul.banner li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+/* 左ペインバナーマウスオン時のテキスト領域 */
+#sidemenu #bnrTxtArea {
+	margin: 0 8px;
+	padding: 0;
+	margin-bottom: 20px;
+	color:#e7e7e7;
+}
+/* 左ペインメニューツリーを包含するdiv */
+#menuGroup{
+	margin:15px 10px;
+	background-color:#ffffff;
+	border: 1px solid #999999;
+}
+/* メニューツリートップレベルのトピックを包含するdiv */
+.parent{
+/*	background-image: url(../../images/menu_bg_arrow1.gif);*/
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding:2px 20px;
+	cursor: pointer;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+/* IE6以外 */
+.parent:hover {
+	color:#ff6c35;
+}
+/*メニューツリートップレベルのトピックを包含するdiv(HOME以外) */
+.leftPaneMenuTop {
+	margin-top:2px;
+}
+/* トップレベルトピックが子トピックを持つ場合はリスト */
+.leftPaneMenuTop ul {
+	list-style: none;
+	margin: 0px;
+	margin-left: 0px;
+	padding: 0px;
+}
+.leftPaneMenuTop ul li {
+	margin:0px;
+	list-style:none;
+	padding: 0px 0px 0px 20px;
+}
+.open {
+	background-image: url(../../images/menu_bg_arrow1.gif);
+	background-repeat:repeat;
+	margin-left:0px;
+	padding-left:0px;
+}
+/* トップレベルトピックが子トピックを持たない */
+.noOpen {
+	background-image: url(../../images/menu_bg_arrow1.gif);
+	background-repeat:repeat;
+}
+/* メニューツリートップレベル(子トピックなし)のトピックを包含するdiv/p */
+.parent p{
+	margin:0;
+}
+/* メニューツリートップレベル(子トピックなし)のトピックを包含するdiv/p/a */
+.parent a {
+	text-decoration:none;
+}
+/* 左ペインメニューを包含するspan */
+span.click{
+	display:block;
+	zoom:1;
+	width:auto;
+	cursor: pointer;
+}
+/* 左ペインメニューのトップレベル以外を包含するspan(IE6以外) */
+span.click:hover{
+	color:#ff6c35;
+}
+/* トピックごとに生成されるツリーのトップレベルul */
+.sideTreeView li{
+	list-style-type:none;
+}
+/* ツリーメニュー最上位のul */
+/*#menuGroup ul.treeview-famfamfam,*/
+/*#menuGroup ul#sideTreeView{ margin-left:20px;}*/
+ul.treeview-famfamfam {
+ margin-left:20px;
+}
+/* ツリーメニュー内全てのli */
+/*ul.treeview li.last,*/
+ul.treeview li{
+	padding-top:0;
+	padding-bottom:0;
+	padding-left:16px;
+	border-top: 1px solid #999999;
+}
+ul.treeview ul {
+	margin-top:0;
+}
+/* ツリーメニューで子topic(ul)を持たないli */
+ul.treeview li.noSub{
+	background-image:none;
+}
+/*
+**************************************************
+右ペイン
+**************************************************
+*/
+
+/* 右ペインフロート設定 */
+#mainWrap #rightColumn {
+	float: right;
+	width: 660px;
+	margin: 0;
+}
+
+/* 右ペイン内本文領域設定 */
+#mainWrap #mainContents {
+	width: 640px;
+	margin: 0 0 0 10px;
+	padding: 10px 0 0;
+}
+/* 右ペインのメインタイトル 
+   #94の修正に伴い、このスタイルは使用していない
+*/
+.rightPaneMainTitle {
+	border-bottom: 2px solid #A6A19D;
+	font-size:20px;
+	color: #1D5C8F;
+}
+/* 右ペイントップページのアイコン群を包含するdiv */
+.iconGroup {
+	margin-top:10px;
+}
+/* 右ペインのトップページのアイコン(top) */
+.topIcon {
+	float:left;
+	width:150px;
+	margin-bottom:10px;
+	color:#000099;
+}
+.noFirstIcon {
+	margin-left:10px;
+}
+.topIconBox {
+	cursor:pointer;
+	font-size:14px;
+	color:#000099;
+}
+.topIconTitle {
+	cursor:pointer;
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+	color:#000099;
+}
+/* 右ペインのトップページのアイコン(bottom) */
+/* IE6, IE7にも対応するため各CSSにも関連定義あり */
+.bottomIcon {
+	float:left;
+	width:200px;
+	margin-bottom:10px;
+	color:#000099;
+}
+.noFirstBottomIcon {
+	margin-left:13px;
+}
+.bottomIconBox {
+	cursor:pointer;
+	background-repeat:no-repeat;
+	line-height:1.2em;
+	font-size:14px;
+}
+div.outer {
+	display: table;
+	width:100%;
+	height:40px;
+}
+div.vertical_middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+div.vertical_middle p.inner {
+	margin: 0;
+	font-weight:bold;
+	width:180px;
+	text-align:center;
+	margin-left:10px;
+}
+/*
+**************************************************
+フッタ
+**************************************************
+*/
+/* フッタ全体を包含するdiv */
+#footer {
+	font-size:93%;
+	border-top: 1px solid #898989;
+	padding:4px;
+	clear: both;
+}
+/* フッタ内のp */
+#footer p {
+	margin-bottom:0;
+}
+/* バージョンを包含するp */
+.version {
+	float:right;
+	padding-right:4px;
+}
+/* 言語コード、region code, coverlangを包含するp */
+.footerCodes {
+	float:right;
+	padding-right:4px;
+	clear:both;
+}
+/* バージョンの言語リソース部分のspan */
+.versionResourcePrefix {
+	margin-right:0.5em;
+}
+.versionResourceSuffix {
+	margin-left:0.5em;
+}
+/* バージョンのedition部分のspan */
+.edition {
+
+}
+/* 年号部分のspan */
+.year {
+	margin-right:0.5em;
+
+}
+/* organization部分のspan */
+.organization{
+
+}
+/* regionコード、coverlangを包含するp */
+.language {
+display:block;
+/*
+	float:right;
+	padding-right:4px;
+*/
+}
+
+/*
+言語コード、regionコードを包含するspan
+Draftだった場合に適用される
+*/
+.draftStyle {
+	color:white;
+}
+
+/*
+****************************************************************************************************
+
+各topic内で使用する設定
+
+****************************************************************************************************
+*/
+/*
+**************************************************
+topic
+**************************************************
+*/
+/* topicの全体（abstract, related model, body, related-link）を包含するトップレベルのdiv */
+.block {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+/*
+**************************************************
+title (topic)
+**************************************************
+*/
+/* トピック内に存在するトピックのタイトルを包含するdiv */
+.title {
+	background: url(../../images/topic1_head_bg.gif) repeat-x 0 bottom;
+	line-height: 1;
+	padding: 0.5em 0.8em;
+	clear: both;
+	border-left: 8px solid #f60;
+	margin-bottom: 1em;
+	background-color:#fcfcfc;
+}
+.title h3 {
+	/*font-size: 138.5%;*/
+	font-size: 146.5%;
+	/*font-size: 153.9%;*/
+	
+	padding: 0;
+	margin: 0;
+	_width:99%;;
+	line-height:1.2;
+}
+/* トピック内に存在するサブトピックのタイトルを包含するdiv */
+.subtitle {
+	background: url(../../images/topic1_head_bg.gif) repeat-x 0 bottom;
+	line-height: 1;
+	padding: 0.5em 0.8em;
+	clear: both;
+	border-left: 8px solid #f60;
+	margin-bottom: 1em;
+	background-color:#fcfcfc;
+}
+
+/* トピック内に存在するサブトピックのタイトル */
+.subtitle h3 {
+	/*font-size: 138.5%;*/
+	font-size: 126.5%;
+	/*font-size: 153.9%;*/
+	
+	padding: 0;
+	margin: 0;
+	_width:90%;;
+	line-height:1.2;
+}
+/*
+**************************************************
+title (other)
+**************************************************
+*/
+/* topic/titleクラスで生成するdiv */
+.otherTitle {
+	font-size:110%;
+	font-weight:bold;
+	margin-bottom:0.2em;
+}
+/*
+**************************************************
+body
+**************************************************
+*/
+/* bodyを包含するdiv */
+.bodyDiv {
+
+}
+
+/*
+**************************************************
+related model
+**************************************************
+*/
+/* related modelを包含するdiv */
+.relatedModel {
+	background-color: #eef2f5;
+	border: 1px solid #ccc;
+	padding: 4px;
+	margin-bottom: 1em;
+}
+/* 言語リソース出力部分 */
+.relatedModel span.relatedModelTitle {
+	font-weight:bold;
+	margin-right: 0.5em;
+}
+/*
+**************************************************
+note
+アイコンあり・帯幅小、アイコンあり・帯幅大、
+アイコンなし・帯幅大の各スタイルが存在する
+現在はアイコンあり・帯幅小の設定となりそれ以外はコメントで残している
+**************************************************
+*/
+/* note全体を包含するdl */
+dl.note {
+	border-bottom: 2px solid #7685e2;
+	margin: 22px 0 22px;
+}
+/*
+noteを包含するdlの子dt
+上帯部分を包含する
+*/
+dt.note {
+	zoom:1;
+	/* アイコンあり・帯幅小パターン */
+	font-size:146.5%;
+	border-bottom: 2px solid #7685e2;
+	background: url(../../images/h_note_bg.gif);
+	/* アイコンあり、帯幅大パターン */
+/*	border-bottom: 2px solid #7685e2;
+	background-color: #D1D6F4;
+	font-size:146.5%;*/
+	/* アイコンなし、帯幅大パターン */
+/*	border-bottom: 2px solid #7685e2;
+	background-color: #D1D6F4;
+	font-size:146.5%;*/
+}
+/* noteアイコン、言語リソース出力領域(span)の設定 */
+span.note {
+	/* アイコンあり・帯幅小パターン */
+	font-weight:bold;
+	padding-left: 15px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	/* アイコンあり、帯幅大パターン */
+/*	background: url(../../images/topic1_icon3.png) no-repeat 13px bottom;
+	font-weight:bold;
+	padding-left: 56px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 2px;*/
+	/* アイコンなし、帯幅大パターン */
+/*	font-weight:bold;
+	padding-left: 15px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 2px;*/
+}
+/* noteの内容全体の上下左右アキ */
+dd.note {
+	margin: 0;
+	padding: 0.6em 1em;
+}
+/*
+**************************************************
+caution
+**************************************************
+*/
+/* caution全体を包含するdl */
+dl.caution {
+	margin: 22px 0 22px;
+	border-bottom: 2px solid #B67100;
+}
+/*
+cautionを包含するdlの子dt
+上帯部分を包含する
+*/
+dt.caution {
+	border-bottom: 2px solid #B67100;
+	background-color: #EFAA23;
+	font-size:146.5%;
+}
+/* cautionアイコン、言語リソース出力領域(span)の設定 */
+span.caution {
+	background: url(../../images/topic1_icon1.png) no-repeat 14px 8px;
+	font-weight:bold;
+	padding-left: 46px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 2px;
+}
+/* cautionの内容全体の上下左右アキ */
+dd.caution {
+	margin: 0;
+	padding: 0.6em 1em;
+}
+/*
+**************************************************
+warning
+**************************************************
+*/
+/* warning全体を包含するdl */
+.warning dl {
+	margin: 22px 0 22px;
+	border-bottom: 2px solid #843511;
+}
+/*
+warningを包含するdlの子dt
+上帯部分を包含する
+*/
+.warning dl dt {
+	border-bottom: 2px solid #843511;
+	background-color: #EA4F00;
+	font-size:146.5%;
+}
+/* warningアイコン、言語リソース出力領域(span)の設定 */
+.warning dl dt span.warning {
+	background: url(../../images/topic1_icon1.png) no-repeat 14px 8px;
+	font-weight:bold;
+	padding-left: 46px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 2px;
+}
+/* warningの内容全体の上下左右アキ */
+.warning dl dd {
+	margin: 0;
+	padding: 0.6em 1em;
+}
+/*
+**************************************************
+important
+アイコンありのパターンをコメントで残している
+**************************************************
+*/
+/* important全体を包含するdl */
+dl.important {
+	border-bottom: 2px solid #00518c;
+	margin: 22px 0 22px;
+}
+/*
+importantを包含するdlの子dt
+上帯のアイコン、言語リソース出力部分
+*/
+dt.important {
+	zoom:1;
+	/*font-size: 14px;
+	border-bottom: 2px solid #00518c;
+	background: url(../../images/h_important_bg.gif) repeat-x 0 bottom;*/
+	/* アイコンなしレイアウト用 */
+	border-bottom: 2px solid #00518c;
+	background-color: #75AADB;
+	font-size:146.5%;
+}
+/* importantアイコン、言語リソース出力領域(span)の設定 */
+span.important {
+	/*background: url(../../images/topic1_icon2.png) no-repeat 14px bottom;
+	font-weight:bold;
+	padding-left: 56px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 22px;*/
+	/* アイコンなしレイアウト用 */
+	font-weight:bold;
+	padding-left: 15px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 2px;
+}
+/* importantの内容全体の上下左右アキ */
+dd.important {
+	/*margin: 0;
+	padding: 0.6em 1em;*/
+	/* アイコンなし用レイアウト */
+	margin: 0;
+	padding: 0.6em 1em;
+}
+
+/*
+**************************************************
+tips
+**************************************************
+*/
+.tipBox {
+	position:relative;
+	margin-top:22px;
+	margin-bottom:22px;
+	width:100%;
+}
+.tipIcon {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.tipBody {
+	margin-left:21px;
+	padding-top:9px;
+}
+.tipInner {
+	border-top:1px solid #A9A9A9;
+	border-bottom:1px solid #A9A9A9;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+/*
+**************************************************
+related links/related table
+**************************************************
+*/
+/* bodyがない場合のrelated link */
+.noBodyRlink li {
+	margin-bottom:0.5em;
+}
+/* related links全体を包含するdl */
+.relatedlinks dl {
+	margin: 0 0 1em;
+	border-bottom: 2px solid #64d434;
+}
+/*
+related linksを包含するdlの子dt
+上帯のアイコン、言語リソース出力部分
+*/
+.relatedlinks dl dt {
+	zoom:1;
+	font-size: 14px;
+	border-bottom: 2px solid #64d434;
+	background: url(../../images/h_related_bg.gif) repeat-x 0 bottom;
+}
+/* related linksアイコン、言語リソース出力領域(span)の設定 */
+.relatedlinks dl dt span.relatedLinkTitle {
+	background: url(../../images/topic1_icon4.png) no-repeat 14px bottom;
+	font-weight: bold;
+	padding-left: 56px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 22px;
+}
+/* related linksの内容全体の上下左右アキ */
+.relatedlinks dl dd {
+	margin: 0;
+	padding: 0.6em 1em;
+}
+/* リンク部分 */
+.relatedLinkClick {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/* サブタスクへのリンクを包含するdiv */
+.subTaskLinkBox {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+/* サブタスクへのリンク部分 */
+.subTaskLinkSpan {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/*
+**************************************************
+steps
+**************************************************
+*/
+/*
+stepsで生成するol
+リスト番号をboldにするためここで設定、下位のspan.fontweightnormalで解除
+*/
+ol.steps {
+	font-weight:bold;
+}
+/*
+**************************************************
+stepsection
+**************************************************
+*/
+.stepSection {
+	font-weight:bold;
+	margin-bottom:0.5em;
+}
+.stepSectionBefore {
+	margin-top:0;
+}
+.stepSectionAfter {
+	margin-bottom:0;
+}
+/*
+**************************************************
+substeps
+**************************************************
+*/
+/* substepsで生成するol */
+ol.substeps {
+
+}
+/*
+**************************************************
+ol
+**************************************************
+*/
+/* olで生成するol */
+ol.ol {
+
+}
+/*
+**************************************************
+ul
+**************************************************
+*/
+/* ulで生成するul */
+ul.ul {
+
+}
+/*
+**************************************************
+choices
+**************************************************
+*/
+/* choicesで生成するul */
+ul.choices {
+
+}
+/*
+**************************************************
+steps-unordered
+**************************************************
+*/
+/* steps-unorderedで生成するul */
+ul.stepsUnordered {
+
+}
+/*
+**************************************************
+li
+**************************************************
+*/
+/* ul, choice, steps-unorderedのリストマーク */
+li.ulList {
+	list-style-type: disc;
+	margin-bottom:0.5em;
+}
+/* steps-unordered/stepsectionのリストマーク */
+li.ulList.stepSect {
+	font-weight:bold;
+	list-style-type: none;
+	margin-left:-20px;
+}
+/* prereq内のul, choice, steps-unorderdのリストマーク */
+li.preqUlList{
+	list-style-type:circle;
+	margin-bottom:0.5em;
+}
+/* ol, step, substepのリストマーク */
+li.olList {
+	list-style-type: decimal;
+	margin-bottom:0.5em;
+}
+/*
+**************************************************
+tipの子孫要素として存在するul, choice, 
+steps-unordered要素（先頭）
+**************************************************
+*/
+.tipInUlFirst {
+	margin-top:0px;
+	margin-bottom:0px;
+}
+/*
+**************************************************
+tipの子孫要素として存在するul, choice, 
+steps-unordered要素（先頭以外）
+**************************************************
+*/
+.tipInUlOther {
+	margin-top:0.5em;
+	margin-bottom:0px;
+}
+/*
+**************************************************
+tipの子孫要素として存在するul, choice, 
+steps-unorderedが持つli要素（先頭）
+**************************************************
+*/
+li.tipInLiFirst {
+	margin-bottom:0px;
+	margin-top:0;
+}
+/*
+**************************************************
+tipの子孫要素として存在するul, choice, 
+steps-unorderedが持つli要素（先頭以外）
+**************************************************
+*/
+li.tipInLiOther {
+	margin-top:0.5em;
+	margin-bottom:0px;
+}
+/*
+**************************************************
+li numbering class
+**************************************************
+*/
+/* 番号付リストの階層別にlist-itemの種類を定義 */
+li.numStyle {
+	list-style-type: decimal;
+}
+li.alphaStyle {
+	list-style-type: lower-alpha;
+}
+li.romanStyle {
+	list-style-type: lower-roman;
+}
+
+/*
+**************************************************
+stepresult
+**************************************************
+*/
+/* stepresultを包含するdiv */
+.stepResult {
+
+}
+/*
+**************************************************
+stepxmp
+**************************************************
+*/
+/* stepxmpを包含するdiv */
+.stepXmp {
+
+}
+/*
+**************************************************
+dl
+**************************************************
+*/
+/* dl要素で生成するdivおよびol */
+.dl {
+
+}
+/*
+**************************************************
+dlentry
+**************************************************
+*/
+/* dlentryで生成するdl */
+dl {
+	margin-left:0px;
+}
+/*
+**************************************************
+dt
+**************************************************
+*/
+/* dtで生成するdt */
+.dt {
+	font-weight:bold;
+}
+/*
+**************************************************
+dd
+**************************************************
+*/
+/* ddで生成するdd */
+.dd {
+	margin-left:2em;
+}
+/*
+**************************************************
+common
+**************************************************
+*/
+.fontWeightNormal{
+	font-weight:normal;
+}
+
+
+/*
+**************************************************
+検索フォーム
+**************************************************
+*/
+/* 検索フォームを包含するdiv */
+#searchArea {
+	padding: 12px;
+	background-color: #afafaf;
+}
+#searchArea form {
+	float:left;
+}
+/* 検索フォーム */
+#searchArea input {
+	vertical-align: middle;
+	width: 348px;
+	height:22px;
+	border: 1px solid #666666;
+}
+/* 検索ボタン */
+#searchArea span.searchClick {
+	display: inline-block;
+	border: 1px solid #666666;
+	margin-left: 2px;
+	vertical-align: middle;
+	cursor: pointer;
+	width: 80px;
+	height: 22px;
+	text-align: center;
+	background-image: url("../../images/btn_search.gif");
+}
+/* 検索領域内glossary/sitemapリンク領域 */
+p.searchAreaLinks {
+	margin-top: 4px;
+	margin-bottom: 0;
+	float: right;
+}
+/* 検索領域内glossary/sitemapリンク */
+p.searchAreaLinks span{
+	text-decoration:underline;
+	color: #011a7f;
+	cursor: pointer;
+}
+/* 検索領域内glossary/sitemapリンク(IE6以外) */
+p.searchAreaLinks span:hover{
+	color:#ff6c35;
+	/*text-decoration:underline;*/
+}
+/*
+**************************************************
+検索結果ページ
+**************************************************
+*/
+/* タイトルを包含する領域 */
+#searchResult .title {
+	border-left-style: none;
+	background-image: none;
+	background-color: white;
+	border-bottom: 2px solid #011a7f;
+	padding-bottom: 2px;
+}
+/* タイトルそのもの */
+#searchResult .title h3 {
+	float: left;
+	width: auto;
+}
+/* 検索ヒット数 */
+#searchResult .title #resultAbout {
+	float: right;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 7px;
+	padding-bottom:7px;
+}
+/* 検索結果を包含するdl */
+#searchResult dl {
+	margin-left: 12px;
+	margin-right: 12px;
+}
+/* 検索結果トピックのタイトル */
+#searchResult dl dt span{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #009;
+	font-size: 107.7%;
+
+}
+/* 検索結果トピックのタイトル */
+#searchResult dl dt span:hover {
+	color: #ff8f00;
+}
+/* 検索結果トピックのshortdesc */
+#searchResult dl dd {
+	margin-left: 0;
+	margin-bottom: 2.5em;
+}
+#searchResultNote {
+	color:#1346FF;
+	font-size:18px;
+	font-weight:bold;
+}
+#searchResultNote dl dd {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/*
+**************************************************
+戻る・進むボタン
+**************************************************
+*/
+/*戻る・進むボタンを包含するdiv*/
+#pageControlTop {
+	text-align: right;
+	padding: 1em;
+}
+/* 各ボタンを包含するspan */
+#pageControlTop span {
+	cursor: pointer;
+}
+/*
+**************************************************
+パンくずリスト
+**************************************************
+*/
+#breadlist{
+	background-image: url(../../images/icon01.gif);
+	background-repeat: no-repeat;
+	background-position: left 0.2em;
+	padding-left:14px;
+	font-size:93%;
+}
+/* リンク */
+.breadLink {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/*
+**************************************************
+sitemap
+**************************************************
+*/
+#sitemap ul li {
+	line-height: 1.5em;
+	margin-bottom: 0.3em;
+}
+/* ページタイトルを包含する領域 */
+#sitemap .title {
+	border-left-style: none;
+	background-image: none;
+	background-color: white;
+	border-bottom: 2px solid #011a7f;
+	padding-bottom: 2px;
+}
+/* ページタイトル */
+#sitemap .title h3 {
+	
+}
+/* 最上位のトピックタイトル */
+#sitemap h4 {
+	border-bottom: 2px solid #f50;
+	color: #f50;
+	font-size: 115.4%;
+	padding-left: 15px;
+}
+/* topic構造表示の最上位のトピックタイトルを包含するul */
+ul.typeSitemap {
+	padding: 0 15px;
+	margin: 1em 0;
+}
+/* topic構造表示の最上位のトピックタイトルを包含するul/li */
+ul.typeSitemap li {
+	list-style-type: none;
+}
+/* topic構造表示の最上位以降のトピックタイトルを包含するul */
+ul.typeChildSitemap {
+	margin-bottom: 0;
+	margin-top: 0.3em;
+}
+/* topic構造表示の最上位のトピックタイトルを包含するul/li */
+ul.typeChildSitemap li {
+	list-style-type: none;
+}
+/* 各HTMLへのリンク */
+.sitemapClick{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+
+/*
+**************************************************
+glossary
+**************************************************
+*/
+/* glossary全体 */
+#glossary {
+	
+}
+/* タイトル */
+#glossary .title {
+	border-left-style: none;
+	background-image: none;
+	background-color: white;
+	border-bottom: 2px solid #011a7f;
+	padding-bottom: 2px;
+}
+/* glossaryタイトル下に表示するshortdesc */
+.glossShortDesc {
+	margin-bottom:20px;
+}
+/* ラベル */
+#glossary h4 {
+	background: url(../../images/topic1_head_bg.gif) repeat-x 0 bottom;
+	line-height: 1;
+	padding: 0.5em 0.8em;
+	clear: both;
+	border-left: 8px solid #f60;
+	margin-bottom: 12px;
+	background-color:#fcfcfc;
+	font-size: 16px;
+}
+/* アルファベット一覧を包含するul */
+#glossary ul.alphabetList {
+	margin: 0 0 30px 10px;
+
+}
+/* アルファベット一覧のli */
+#glossary ul.alphabetList li {
+	display: inline-block;
+	list-style-type: none;
+	background-color: #f60;
+	color: #fff;
+	line-height: 1em;
+	text-align: center;
+	width: 18px;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+/* アルファベット一覧のli、hu-HU限定スタイル */
+#glossary ul.alphabetList-hu-HU li {
+	width:38px;
+}
+/* アルファベット一覧のli、zh-TW限定スタイル */
+#glossary ul.alphabetList-zh-TW li {
+	width:86px;
+}
+
+/*
+アルファベット一覧のli
+IE6,7で横並びを実現するためCSSハックによる定義を行っている
+*/
+#glossary ul.alphabetList li {
+	/display: inline;
+	/margin-right: 4px;
+}
+/* アルファベット一覧のli/span */
+#glossary ul.alphabetList li span {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	cursor: pointer;
+}
+/* 各HTMLへのリンク */
+.glossLink {
+	text-decoration:underline;
+	cursor: pointer;
+	color: #00008B;
+}
+/*
+**************************************************
+ページ先頭へスクロールするリンク
+**************************************************
+*/
+.goPageTop {
+	text-align: right;
+}
+.goPageTop span.pageTopLink {
+	background: url(../../images/goPagetop_arw.gif) no-repeat 0 center;
+	padding-left: 14px;
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/*
+**************************************************
+b
+**************************************************
+*/
+.b {
+	font-weight: bold;
+}
+/*
+**************************************************
+sup
+**************************************************
+*/
+.sup {
+	vertical-align:0.5em;
+	font-size:0.7em;
+}
+/*Spec用でBSC様のCSSスタイルが当たらないようキャンセルする */
+.mod-h2 span.sup-mod-h2-cancel {
+	display: inline;
+	padding: 0px 0px 0px 0px;
+	background: none;
+	font-size: 0.7em;
+}
+/*
+**************************************************
+section
+**************************************************
+*/
+.section {
+	margin-bottom:16px;
+	margin-top:16px;
+}
+/*
+**************************************************
+result
+**************************************************
+*/
+.result {
+
+}
+/*
+**************************************************
+prereq
+**************************************************
+*/
+.prereq {
+	border: 1px solid #999;
+	padding: 0.4em 1em;
+	margin: 1em;
+}
+/*
+**************************************************
+postreq
+**************************************************
+*/
+.postreq {
+
+}
+/*
+**************************************************
+context
+**************************************************
+*/
+.context {
+
+}
+/*
+**************************************************
+refsyn
+**************************************************
+*/
+.refsyn {
+
+}
+/*
+**************************************************
+xref
+**************************************************
+*/
+/* xrefを包含するspan */
+.xref{
+
+}
+/* xrefのリンク */
+.xrefLinkClick {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/*
+**************************************************
+p
+**************************************************
+*/
+/* p要素で生成するp */
+.p {
+
+}
+/*
+**************************************************
+pj
+**************************************************
+*/
+/* ph要素で生成するspan */
+.ph {
+}
+/*Spec用でBSC様のCSSスタイルが当たらないようキャンセルする */
+.mod-h2 span.ph-mod-h2-cancel {
+	display: inline;
+	padding: 0px 0px 0px 0px;
+	background: none;
+	font-size: 100%;
+}
+/*
+**************************************************
+i
+**************************************************
+*/
+/* i要素で生成するspan */
+.i {
+	font-style:italic;
+}
+/*
+**************************************************
+sup
+**************************************************
+*/
+sup {
+
+}
+/*
+**************************************************
+u
+**************************************************
+*/
+/* u要素で生成するu */
+u {
+
+}
+/*
+**************************************************
+uicontrol
+**************************************************
+*/
+/* uicontrolで生成するspan */
+.uicontrol {
+	font-weight:bold;
+}
+/*
+**************************************************
+msgph
+**************************************************
+*/
+/* msgphで生成するspan */
+.msgph {
+	font-family:Courier New;
+}
+/*
+**************************************************
+cmd
+**************************************************
+*/
+/* cmdで生成するspan */
+.cmd {
+
+}
+/*
+**************************************************
+menucascade
+**************************************************
+*/
+/* menucascadeを包含するspan */
+.menucascade {
+
+}
+/* menucascade/uicontrol間の区切り文字を包含するspan */
+.menucascadeDelimiter {
+	margin-left:5px;
+	margin-right:5px;
+}
+
+/* menucascade/uicontrol間の区切り文字を包含するspan(表内) */
+.menucascadeTableDelimiter {
+	margin-left:1px;
+	margin-right:1px;
+}
+
+/*
+**************************************************
+keyword
+**************************************************
+*/
+/* keywordを包含するspan */
+.keyword {
+
+}
+/*
+**************************************************
+abstract
+**************************************************
+*/
+/* abstractを包含するdiv */
+.abstract {
+
+}
+/*
+**************************************************
+shortdesc
+**************************************************
+*/
+/* shortdescを包含するdiv */
+.shortDesc {
+
+}
+/* related-linkで出力されるshortdescを包含するdiv */
+.desc {
+
+}
+
+
+
+
+
+/*
+**************************************************
+fn
+**************************************************
+*/
+/* 本文中のfnを包含するspan */
+.fnInSide {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #00008B;
+}
+/* table外に出力するfnを包含するdiv */
+.fnOutBox {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+/* table外に出力するfn単体のdiv */
+.fnOutSide {
+
+}
+/* table外に出力するfnの記号を包含するspan */
+.fnOutNum {
+	width:20px;
+	float:left;
+}
+.fnOutContent {
+	margin-left:20px;
+}
+/*
+**************************************************
+tutorialinfo
+**************************************************
+*/
+/* tutorialinfoで生成するdiv */
+.tutorialinfo {
+
+}
+/*
+**************************************************
+info
+**************************************************
+*/
+/* infoで生成するdiv */
+.info {
+
+}
+/*
+**************************************************
+fig
+**************************************************
+*/
+/* figで生成するdiv */
+.fig {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+/*
+**************************************************
+img
+**************************************************
+*/
+/* imgタグ */
+/* img全体を包含する要素 */
+.imageWrapLeft {
+	text-align:left;
+}
+.imageWrapRight {
+	text-align:right;
+}
+.imageWrapCenter {
+	text-align:center;
+}
+.image {
+	border-style: none;
+	vertical-align:middle;
+}
+.blockImage {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+.inlineImage {
+	height:1.8em;
+}
+/* IE6透過設定 */
+.imgover,
+.png_bg {
+	/* img ダミー登録 */
+}
+/*
+**************************************************
+table
+**************************************************
+*/
+/* tableを包含するdiv */
+.tableDiv {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+.tDivAlign {
+}
+.tDivAlignCenter {
+	text-align:center;
+}
+/* table */
+.table {
+	background-color:#FFFFFF;
+}
+.tAlign {
+}
+.tAlignCenter {
+	margin-left:auto;
+	margin-right:auto;
+}
+/* thead */
+.thead {
+	background-color:#D3D3D3;
+}
+/* tbody */
+.tbody {
+
+}
+/* tr */
+.tr {
+
+}
+/* th */
+.th {
+
+}
+/* td */
+.td {
+
+}
+.th.align_left,
+.td.align_left {
+	text-align:left;
+}
+.th.align_center,
+.td.align_center {
+	text-align:center;
+}
+.th.align_right,
+.td.align_right {
+	text-align:right;
+}
+.th.align_justify,
+.td.align_justify {
+	text-align:justify;
+}
+.th.valign_top,
+.td.valign_top {
+vertical-align:top;
+}
+.th.valign_middle,
+.td.valign_middle {
+vertical-align:middle;
+}
+.th.valign_bottom,
+.td.valign_bottom {
+vertical-align:bottom;
+}
+.th.borderRightSolid,
+.td.borderRightSolid {
+	border-right:1px solid #000000;
+}
+.th.borderRightNone,
+.td.borderRightNone {
+	border-right:1px solid none;
+}
+.th.borderBottomSolid,
+.td.borderBottomSolid {
+	border-bottom:1px solid #000000;
+}
+.th.borderBottomNone,
+.td.borderBottomNone {
+	border-bottom:1px solid none;
+}
+
+/*
+**************************************************
+choicetable/properties
+**************************************************
+*/
+/* simpletableのtable */
+.simpleTable,
+.simpleTableNoRule,
+.choiceTable {
+	margin-top:1em;
+	margin-bottom:1em;
+	background-color:#FFFFFF;
+}
+.simpleTable {
+	border: solid 1px #000000;
+	border-collapse: collapse;
+}
+.choiceTable {
+	border:none;
+	border-collapse: collapse;
+}
+/* simpletableのthead */
+.simpleHead {
+	background-color:#D3D3D3;
+}
+.choiceHead {
+	background-color:#D1D6F4;;
+}
+/* simpletableのth */
+.simpleTh,
+.simpleThNoRule,
+.choiceTh {
+	padding: 0.4em;
+	text-align:left;
+}
+.simpleTh {
+	border: solid 1px #000000;
+}
+.choiceTh {
+	border-right: solid 3px #FFFFFF;
+	border-left: solid 3px #FFFFFF;
+	border-bottom: none;
+	border-top: solid 3px #FFFFFF;
+}
+/* simpletableのrow */
+.simpleRow {
+
+}
+/* simpletableのentry */
+.simpleTd,
+.simpleTdNoRule,
+.choiceTd {
+	padding: 0.4em;
+	text-align:left;
+}
+.simpleTd {
+	border: solid 1px #000000;
+}
+.choiceTd {
+	border-right:  solid 3px #FFFFFF;
+	border-left:  solid 3px #FFFFFF;
+	border-bottom:solid 1px #000000;
+	border-top: none;
+}
+/*
+**************************************************
+hardkey
+**************************************************
+*/
+.hardkey {
+	font-weight:bold;
+}
+/*
+**************************************************
+spchar
+**************************************************
+*/
+/* spcharで生成するspan */
+.spchar {
+
+}
+/* imgタグ */
+.spcharImg {
+	vertical-align:middle;
+}
+/*
+**************************************************
+文字方向制御
+**************************************************
+*/
+.bidiEmbed {
+	unicode-bidi:embed;
+}
+.bidiOverride {
+	unicode-bidi:bidi-override;
+}
+.rightToLeft {
+	direction:rtl;
+}

@@ -1,0 +1,207 @@
+﻿@charset "utf-8";
+/*-----------------------------------------------
+bodyスタイル
+----------------------------------------------- */
+body img {
+	vertical-align:bottom;
+}
+html {
+	padding:0;
+	margin:0;
+
+}
+body {
+	text-align:center;
+	padding:0;
+	margin:0;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	line-height:1.5;
+	color: #565656;
+}
+#body {
+	text-align:left;
+	padding:0;
+	width: 798px;
+	font-size:100%;
+	border: 1px solid #bfbfbf;
+	margin: 50px auto 0;
+}
+
+#body {/*IE6 huck*/
+	_width: 800px;
+}
+a{ color:#0033cc; text-decoration:none;}
+a:hover{ text-decoration:underline;}
+
+/* 一般設定 */
+
+img {
+	border-style: none;
+}
+
+.alignR {
+	text-align: right !important;
+}
+
+.alignC {
+	text-align: center !important;
+}
+
+.alignL {
+	text-align: left !important;
+}
+
+.columnL,
+.columnC,
+.columnR {
+	float: left;
+}
+
+.noborder {
+	border-style: none !important;
+}
+
+h2.noborder, h3.noborder, h4.noborder {
+	background-image: none !important;
+}
+
+ul.noBullet li, li.noBullet {
+	list-style-type: none !important;
+}
+
+.imgover {
+	/* img hover用ダミー登録 */
+}
+
+.clear {
+	clear: both;
+	font-size: 1px;
+	line-height: 0;
+}
+
+/* ＋＋＋＋＋＋ header ＋＋＋＋＋＋ */
+
+#header {
+	height: 72px;
+}
+
+#header h1 {
+	float: left;
+	margin: 0;
+	padding: 18px 0 0 18px;
+}
+
+#header p {
+	float: right;
+	padding-top: 18px;
+	padding-right: 18px;
+	margin: 0;
+}
+
+/* ＋＋＋＋＋＋ main ＋＋＋＋＋＋ */
+
+#main {
+	background: url(../images/bg_grad.gif) repeat-x;
+	position: relative;
+	height: 484px;
+}
+
+#main #breadcrumb {
+	height: 24px;
+	padding-left: 18px;
+	padding-top: 15px;
+	width: 602px;
+}
+
+#main #breadcrumb {/*IE6 huck*/
+	_width: 620px;
+	_height: 39px;
+}
+
+#main #breadcrumb ul {
+	margin: 0;
+	padding: 0;
+}
+
+#main #breadcrumb li a {
+	color: #565656;
+}
+
+#main #breadcrumb ul li {
+	font-size: 12px;
+	float: left;
+	background: url(../images/breadcrumb_l.gif) no-repeat left;
+	list-style-type: none;
+	padding-right: 0.4em;
+	padding-left: 0.4em;
+}
+
+#main #breadcrumb ul li.st {
+	background: url(../images/breadcrumb_listmark.gif) no-repeat 0 center;
+	padding-left: 1em;
+}
+
+#main #breadcrumb ul li.act,
+#main #breadcrumb ul li.act a {
+	color: #0090ff;
+	font-weight: bold;
+}
+
+#main #breadcrumb li a:hover {
+}
+
+#main .mainWrapper {
+	margin-left: 32px;
+	padding-right: 32px;
+	background: url(../images/bg_img.jpg) no-repeat 414px 116px;
+	height: 384px;
+}
+
+#main .mainWrapper #menu {
+	float: left;
+	padding-top: 18px;
+}
+
+#main .mainWrapper #rightWrapper {
+	float: right;
+	width: 360px;
+}
+
+/* ＋＋＋＋＋＋ footer ＋＋＋＋＋＋ */
+
+#footer {
+	height: 42px;
+	clear: both;
+}
+
+#footer p {
+	padding-top: 15px;
+	text-align: center;
+	font-size: 12px;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+/*-----------------------------------------------
+CSSハック
+----------------------------------------------- */
+.clearfix:after,
+.main .block:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix{
+	height: 1%;
+}
+.clearfix{
+	display: block;
+}
+/* End hide from IE-mac */

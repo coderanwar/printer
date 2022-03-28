@@ -1,0 +1,92 @@
+﻿@charset "utf-8";
+/*-----------------------------------------------
+bodyスタイル
+----------------------------------------------- */
+body img {
+	vertical-align:bottom;
+}
+html {
+	padding:0;
+	margin:0;
+}
+body {
+	text-align:center;
+	padding:0;
+	margin:0;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	line-height:1.5;
+	color: #565656;
+}
+#body {
+	padding:0;
+	font-size:100%;
+}
+a{ text-decoration:none;}
+a:hover{ text-decoration:underline;}
+
+.boxMsg{ 
+	padding:20px;
+	border:solid 1px #ededee;
+	background-color:#f5f5f5;
+  position: absolute;
+  width:400px;
+  top: 50%;
+  left: 50%;
+
+
+
+}
+
+.boxText{ text-align:left; font-size:1.1em;	margin-bottom:2em;}
+.boxBtn{
+	font-size:1.6em;
+}
+.boxBtn p{ margin-bottom:0;}
+.boxBtn a{
+	background-color: #004A9A;
+	color: #FFF;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-decoration:none;
+	
+	
+	background-image: -moz-linear-gradient(top, #005abc, #004A9A); /* これはFirefox 3.6 用*/
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #005abc),color-stop(1, #004A9A)); /* これはSafari & Chrome などのwerbtik系*/
+  filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#005abc', endColorstr='#004A9A'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#005abc', endColorstr='#004A9A')"; /* IE8 */
+	background: linear-gradient(to bottom, #005abc, #004A9A);
+	width:60%;
+}
+.boxBtn a:hover{
+	text-decoration:none;
+	background-color: #005abc;
+	background-image: -moz-linear-gradient(top, #007dde, #006bc6); /* これはFirefox 3.6 用*/
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #007dde),color-stop(1, #006bc6)); /* これはSafari & Chrome などのwerbtik系*/
+  filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#007dde', endColorstr='#006bc6'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#007dde', endColorstr='#006bc6')"; /* IE8 */
+	background: linear-gradient(to bottom, #007dde, #006bc6);
+}
+/*-----------------------------------------------
+CSSハック
+----------------------------------------------- */
+.clearfix:after,
+.main .block:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix{
+	height: 1%;
+}
+.clearfix{
+	display: block;
+}
+/* End hide from IE-mac */

@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/*
+**************************************************
+importantについて、basic.cssの内容を上書き
+コメントをはずす事でアイコンありのimportantになります
+**************************************************
+*/
+
+/* important全体を包含するdl */
+
+/*
+
+dl.important {
+	border-bottom: 2px solid #00518c;
+	margin: 0 0 1em;
+
+*/
+
+}
+/*
+importantを包含するdlの子dt
+上帯のアイコン、言語リソース出力部分
+*/
+dt.important {
+
+/*
+	zoom:1;
+	font-size: 14px;
+	border-bottom: 2px solid #00518c;
+	background: url(../../images/h_important_bg.gif) repeat-x 0 bottom;
+*/
+
+
+}
+/* importantアイコン、言語リソース出力領域(span)の設定 */
+span.important {
+
+/*
+	background: url(../../images/topic1_icon2.png) no-repeat 14px bottom;
+	font-weight:bold;
+	padding-left: 56px;
+	display: inline-block;
+	padding-bottom: 0;
+	margin-bottom: 1px;
+	padding-top: 22px;
+*/
+
+
+}
+/* importantの内容全体の上下左右アキ */
+dd.important {
+
+/*
+	margin: 0;
+	padding: 0.6em 1em;
+*/
+
+}
+
+/*
+**************************************************
+prereqのスタイルを変更する例
+コメントをはずす事でprereqに背景色がつきます
+**************************************************
+*/
+.prereq {
+
+/*
+	background-color:gray;
+*/
+
+}

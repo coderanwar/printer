@@ -1,0 +1,391 @@
+@charset "utf-8";
+/*
+**************************************************
+トップページ/HTML全体
+**************************************************
+*/
+/* bodyタグ全体を包含するdiv */
+#body {
+	direction:rtl;
+	text-align:right;
+}
+#header {
+	direction:ltr;
+	text-align:left;
+}
+/* 左ペイン、右ペイン全体の背景画像 */
+#mainWrap {
+	background: url(../../images/sidemenu_bg.gif) repeat-y right;
+}
+/*
+**************************************************
+左ペイン
+**************************************************
+*/
+/* 左ペインフロート設定 */
+#mainWrap #sidemenu {
+	float:right;
+}
+.leftPaneMenuTop ul li {
+	padding: 0px 20px 0px 0px;
+}
+.open {
+	margin-right:0px;
+	padding-right:0px;
+	padding-left:20px;
+}
+/* ツリーメニュー最上位のul */
+ul.treeview-famfamfam {
+	margin-right:20px;
+	margin-left:0;
+}
+/* ツリーメニュー内全てのli */
+ul.treeview li{
+	padding-right:16px;
+	padding-left:0;
+}
+/*
+**************************************************
+右ペイン
+**************************************************
+*/
+/* 右ペインフロート設定 */
+#mainWrap #rightColumn {
+	float:left;
+}
+
+/* 右ペイン内本文領域設定 */
+#mainWrap #mainContents {
+	margin: 0 10px 0 0;
+}
+/* 右ペイントップページのアイコン群を包含するdiv */
+.iconGroup {
+	margin-top:10px;
+}
+/* 右ペインのトップページのアイコン(top) */
+.topIcon {
+	float:right;
+}
+.noFirstIcon {
+	margin-right:10px;
+	margin-left:0px;
+}
+.topIconTitle {
+	text-align:right;
+}
+/* 右ペインのトップページのアイコン(bottom) */
+/* IE6, IE7にも対応するため各CSSにも関連定義あり */
+.bottomIcon {
+	float:right;
+}
+.noFirstBottomIcon {
+	margin-right:13px;
+	margin-left:0px;
+}
+div.vertical_middle p.inner {
+	margin: 0;
+	font-weight:bold;
+	width:180px;
+	text-align:center;
+	margin-right:10px;
+	margin-left:0px;
+}
+/*
+**************************************************
+フッタ
+**************************************************
+*/
+/* フッタ全体を包含するdiv */
+#footer {
+	direction:ltr;
+	text-align:left;
+}
+/*
+****************************************************************************************************
+
+各topic内で使用する設定
+
+****************************************************************************************************
+*/
+/*
+**************************************************
+title (topic)
+**************************************************
+*/
+/* トピック内に存在するトピックのタイトルを包含するdiv */
+.title {
+	border-right: 8px solid #f60;
+	border-left:none;
+}
+/* トピック内に存在するサブトピックのタイトルを包含するdiv */
+.subtitle {
+	border-right: 8px solid #f60;
+	border-left:none;
+}
+/*
+**************************************************
+note
+**************************************************
+*/
+/* noteアイコン、言語リソース出力領域(span)の設定 */
+span.note {
+	/* アイコンあり・帯幅小パターン */
+	background-position:right;
+	padding-right:15px;
+	padding-left:0;
+}
+/*
+**************************************************
+caution
+**************************************************
+*/
+/* cautionアイコン、言語リソース出力領域(span)の設定 */
+span.caution {
+	background: url(../../images/topic1_icon1.png) no-repeat bottom;
+	background-position:right;
+	margin-right:10px;
+	padding-right:36px;
+	padding-left:0;
+}
+/*
+**************************************************
+warning
+**************************************************
+*/
+/* warningアイコン、言語リソース出力領域(span)の設定 */
+.warning dl dt span.warning {
+	background: url(../../images/topic1_icon1.png) no-repeat bottom;
+	margin-right:10px;
+	background-position:right;
+	padding-right: 36px;
+	padding-left:0px;
+}
+/*
+**************************************************
+important
+**************************************************
+*/
+/* importantアイコン、言語リソース出力領域(span)の設定 */
+span.important {
+	padding-left:0px;
+	padding-right:15px;
+}
+/*
+**************************************************
+tips
+**************************************************
+*/
+.tipBox {
+	position:relative;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:100%;
+}
+.tipIcon {
+	position:absolute;
+	left:auto;
+	right:0;
+	top:0;
+}
+.tipBody {
+	margin-right:21px;
+	margin-left:0;
+}
+/*
+**************************************************
+related links/related table
+**************************************************
+*/
+/* related linksアイコン、言語リソース出力領域(span)の設定 */
+.relatedlinks dl dt span.relatedLinkTitle {
+	background-position:right;
+	margin-right: 10px;
+	padding-right: 56px;
+}
+/*
+**************************************************
+dlentry
+**************************************************
+*/
+dl {
+	margin-right:0px;
+}
+/*
+**************************************************
+dd
+**************************************************
+*/
+/* ddで生成するdd */
+.dd {
+	margin-right:2em;
+}
+/*
+**************************************************
+検索フォーム
+**************************************************
+*/
+#searchArea form {
+	float:right;
+}
+/* 検索領域内glossary/sitemapリンク領域 */
+p.searchAreaLinks {
+	float: left;
+}
+/*
+**************************************************
+検索結果ページ
+**************************************************
+*/
+/* タイトルそのもの */
+#searchResult .title h3 {
+	float: right;
+	width: auto;
+}
+/* 検索ヒット数 */
+#searchResult .title #resultAbout {
+	float: left;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 7px;
+	padding-bottom:7px;
+}
+/* 検索結果トピックのshortdesc */
+#searchResult dl dd {
+	margin-right: 0;
+}
+/*
+**************************************************
+戻る・進むボタン
+**************************************************
+*/
+/*戻る・進むボタンを包含するdiv*/
+#pageControlTop {
+	direction:rtl;
+	text-align:left;
+}
+/*
+**************************************************
+パンくずリスト
+**************************************************
+*/
+#breadlist{
+	text-align:right;
+	background-position: right 0.2em;
+	padding-right:24px;
+	padding-left:0px;
+}
+/* 区切り文字 */
+breadCrumbSeparator {
+	direction:rtl;
+	unicode-bidi:bidi-override;
+}
+/*
+**************************************************
+glossary
+**************************************************
+*/
+/* ラベル */
+#glossary h4 {
+	border-right: 8px solid #f60;
+	border-left:none;
+}
+/* アルファベット一覧を包含するul */
+#glossary ul.alphabetList {
+	margin: 0 0 10px 30px;
+
+}
+/* アルファベット一覧のli */
+#glossary ul.alphabetList li {
+	display: inline-block;
+	list-style-type: none;
+	background-color: #f60;
+	color: #fff;
+	line-height: 1em;
+	text-align: center;
+	width: 18px;
+	margin-left:4px;
+	margin-right:0px;
+	margin-bottom: 4px;
+}
+/*
+アルファベット一覧のli
+IE6,7で横並びを実現するためCSSハックによる定義を行っている
+*/
+#glossary ul.alphabetList li {
+	/display: inline;
+	/margin-left:4px;
+	/margin-right:0px;
+}
+/*
+**************************************************
+ページ先頭へスクロールするリンク
+**************************************************
+*/
+.goPageTop {
+	text-align:left;
+}
+.goPageTop span.pageTopLink {
+	display:block;
+	padding-right:0px;
+	padding-left:14px;
+	background: url(../../images/goPagetop_arw.gif) no-repeat left center;
+}
+/*
+**************************************************
+fn
+**************************************************
+*/
+/* table外に出力するfnの記号を包含するspan */
+.fnOutNum {
+	float:right;
+}
+.fnOutContent {
+	margin-right:20px;
+}
+
+/*
+**************************************************
+table
+**************************************************
+*/
+.th.align_left,
+.td.align_left {
+	text-align:right;
+}
+.th.align_right,
+.td.align_right {
+	text-align:left;
+}
+.th.borderRightSolid,
+.td.borderRightSolid {
+	border-left:1px solid #000000;
+	border-right:1px none #000000;
+}
+.th.borderRightNone,
+.td.borderRightNone {
+	border-left:1px solid none;
+	border-right:1px none #000000;
+}
+/*
+**************************************************
+choicetable/properties
+**************************************************
+*/
+/* simpletableのth */
+.simpleTh,
+.simpleThNoRule {
+	text-align:right;
+}
+/* simpletableのentry */
+.simpleTd,
+.simpleTdNoRule {
+	text-align:right;
+}
+/*
+**************************************************
+sitemap
+**************************************************
+*/
+#sitemap .title{
+	border-right-style:none;
+}
